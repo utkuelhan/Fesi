@@ -1,0 +1,367 @@
+{% extends 'first_draft.html' %}
+{% block title %}Form{% endblock %}
+
+{% block content %}
+<head>
+	<title>Diabetes Patient Form</title>
+	<style>
+		body{
+
+			background-color: #ffffff;
+			margin: 0;
+
+		}
+
+		h2{
+			background-color: #eca1a6;
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+		td{
+			padding: 7px;
+		}
+		input{
+			height: 30px;
+			border-radius: 10px;
+			border: none;
+
+		}
+
+		input:focus{
+			outline: none;
+			border: 1px solid forestgreen;
+		}
+		input:hover{
+			box-shadow: 5px 5px 5px black;
+		}
+
+		.button{
+			background-color: forestgreen;
+			color:#fff;
+			border: none;
+			padding: 7px
+		}
+
+		.button:hover {
+			cursor: pointer;
+			box-shadow: 5px 5px 5px red;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Diabetes Patient Form</h1>
+	<form action=/Info method="post">
+		<div id="Patient-details">
+		<h2 align="center">Patient Details</h2>
+			<table width="100%">
+				</br>
+                <tr>
+					<td><b>First Name</b></td>
+					<td>
+						<input type="text" placeholder="First Name" size="25" name="first_name">
+					</td>
+                    <td><b>Middle Name</b></td>
+					<td>
+                    <input type="text" placeholder="Middle Name" size="25" name="middle_name">
+                    </td>
+
+					<td><b>Last Name</b></td>
+					<td>
+						<input type="text" placeholder="Last Name" size="25" name="last_name">
+					</td>
+				</tr>
+				<tr>
+					<td><b>Father's Name</b></td>
+					<td>
+						<input type="text" placeholder="Father's Name" size="25" name="fathers_name">
+					</td>
+					<td><b>Mother's Name</b></td>
+					<td>
+						<input type="text" placeholder="Father's Name" size="25" name="mothers_name">
+					</td>
+
+					<td><b>Weight</b></td>
+					<td>
+						<input type="number" placeholder="Weight (kg)" size="25" name="weight">
+					</td></tr>
+				<tr>
+					<td><b>Date of Birth</b></td>
+					<td>
+						<input type="date">
+					</td>
+					<td><b>Place of Birth</b></td>
+					<td>
+						<input type="text" placeholder="Place of Birth" size="25" name="date">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>Select Gender</b></td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="Male">
+                        <label class="form-check-label" for="Male">
+                           Male
+                        </label>
+					</td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="Female">
+                        <label class="form-check-label" for="Female">
+                           Female
+                        </label>
+					</td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="other_gender">
+                        <label class="form-check-label" for="other_gender">
+                           Other
+                        </label>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Mobile Number</b></td>
+					<td>
+						<input type="number" placeholder="(5xx)xxx" size="25">
+					</td>
+					<td><b>Email</b></td>
+					<td>
+						<input type="text" placeholder="Email" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>Known Languages</b></td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="turkish_language">
+                        <label class="form-check-label" for="turkish_language">
+                           Turkish
+                        </label>
+					</td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="english_language">
+                        <label class="form-check-label" for="english_language">
+                           English
+                        </label>
+					</td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="other_language">
+                        <label class="form-check-label" for="other_language">
+                           Other
+                        </label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>Your Mother Tongue</b></td>
+					<td>
+						<select class="form-select" aria-label="Default select example">
+                          <option selected>Language</option>
+                          <option value="1">Turkish</option>
+                          <option value="2">English</option>
+                          <option value="3">Other</option>
+                        </select>
+					</td>
+				</tr>
+                <tr>
+					<td><b>Nationality</b></td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="turkish_nation">
+                        <label class="form-check-label" for="turkish_nation">
+                           Turkish
+                        </label>
+					</td>
+					<td>
+					<td>
+                      <input class="form-check-input" type="checkbox" value="" id="other_nation">
+                        <label class="form-check-label" for="other_nation">
+                           Other
+                        </label>
+					</td>
+				</tr>
+			</table>
+		</div>
+        </br>
+
+		<!-- Diet List -->
+		<div id="diet-list">
+		<h2>Diet List</h2>
+			<table width="100%">
+                </br>
+				<tr>
+					<td><b>Average Calorie Per Day</b></td>
+					<td>
+						<select class="form-select" aria-label="Default select example">
+                          <option selected>Please Choose Calorie Range</option>
+                          <option value="1">1500 - 2000 cal</option>
+                          <option value="2">2000 - 2500 cal</option>
+                          <option value="3">2500 - 3000 cal</option>
+                        </select>
+					</td>
+				</tr>
+
+                <tr>
+					<td><b>Blood Sugar Level</b></td>
+					<td>
+						<select class="form-select" aria-label="Default select example">
+                          <option selected>Please Choose a Blood Sugar Level</option>
+                          <option value="1">100 mg/dl (5.6 mmol/L)</option>
+                          <option value="2">100 to 125 mg/dl (5.6 to 6.9 mmol/L)</option>
+                          <option value="3">126 or higher mg/dl (7 or higher mmol/L)</option>
+                        </select>
+					</td>
+				</tr>
+                <tr>
+					<td><b>Sleep Per Day</b></td>
+					<td>
+						<select class="form-select" aria-label="Default select example">
+                          <option selected>Please Choose Average Hours of Sleep</option>
+                          <option value="1">0 - 4 hours</option>
+                          <option value="2">4 - 7 hours</option>
+                          <option value="3">7+ hours</option>
+                        </select>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Water Consumption</b></td>
+					<td>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Water Consumption (Liters)" name="water">
+                        </div>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Pills Taken</b></td>
+					<td>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Pill Consumption" name="pills">
+                        </div>
+					</td>
+				</tr>
+
+                <tr>
+                   <td><b>Oxygen Level</b></td>
+                    <td>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="SpO2" name="02">
+                        </div>
+                    </td>
+                </tr>
+                 <tr>
+					<td><b>Insuline Usage</b></td>
+					<td>
+						<div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">No</label>
+                        </div>
+                        </td>
+				</tr>
+			</table>
+			<br><br>
+		</div>
+
+		<!-- Doctor Details -->
+		<div id="doctor-details">
+		<h2>Doctor Details</h2>
+			<table width="100%">
+				</br>
+				<tr>
+					<td><b>Full Doctor Name</b></td>
+					<td><b>Email</b></td>
+					<td><b>Telephone Number</b></td>
+					<td><b>Choice</b></td>
+				</tr>
+				<tr>
+					<td>Utku Bulut</td>
+					<td>utku.bulut@tedu.edu.tr</td>
+					<td>+90 (532) 456 93 48</td>
+					<td><input class="form-check-input" type="checkbox" value="" id="Choose">
+                        <label class="form-check-label" for="Choose">
+                           Choose
+                        </label></td>
+				</tr>
+				<tr><td>Utku Elhan</td>
+					<td>utku.elhan@tedu.edu.tr</td>
+					<td>+90 (533) 053 26 80</td>
+					<td><input class="form-check-input" type="checkbox" value="" id="Choose1">
+                        <label class="form-check-label" for="Choose1">
+                           Choose
+                        </label></td>
+				</tr>
+				<tr>
+					<td>Emre Durakoğlu</td>
+					<td>emre.durakoglu@tedu.edu.tr</td>
+					<td>+90 (535) 020 04 07</td>
+					<td><input class="form-check-input" type="checkbox" value="" id="Choose2">
+                        <label class="form-check-label" for="Choose2">
+                           Choose
+                        </label></td>
+				</tr>
+				<tr><td>Mehmhet Gökay Erdinç</td>
+					<td>mgokay.erdinc@tedu.edu.tr</td>
+					<td>+90 (539) 206 55 55</td>
+					<td><input class="form-check-input" type="checkbox" value="" id="Choose3">
+                        <label class="form-check-label" for="Choose3">
+                           Choose
+                        </label></td>
+				</tr>
+			</table>
+			</br>
+		</div>
+
+		<!-- Other Details -->
+		<div id="other-details">
+		<h2>Other Details</h2>
+			<table width="100%">
+				<tr>
+					<td><b>Diabetes Hereditary</b></td>
+					<td>
+						<div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="diacheck" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="diacheck1" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">No</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="diacheck2" value="option3">
+                          <label class="form-check-label" for="inlineCheckbox2">I don't know</label>
+                        </div>
+                        </td>
+				</tr>
+				<tr>
+					<td><b>Date Of Joining</b></td>
+					<td>
+						<input type="date">
+					</td>
+
+				<tr>
+					<td>
+						<div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="privacy1" value="option4">
+                          <label class="form-check-label" for="inlineCheckbox2"><b>I accept my information can be stored and shared.</b></label>
+                        </div>
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						 <button type="submit" class="btn btn-primary">Submit</button>
+					</td>
+					<td>
+						 <button type="submit" class="btn btn-danger">Reset</button>
+					</td>
+				</tr>
+			</table>
+		</br></br>
+		</div>
+	</form>
+
+	<!-- Main Footer -->
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'first_draft.html' %}
+{% block title %}Stored Information{% endblock %}
+{% block content %}
+
+<style>
+.same{
+  display:inline-block;
+}</style>
+
+  <div class="container">
+    <h1>Stored Information</h1>
+    <br/><br/>
+    <tr>
+		<p class="same"><b> First Name: </b>{{ first_name }} &emsp;&emsp;&emsp;</p>
+        <p class="same"><b> Middle Name: </b>{{ middle_name }} &emsp;&emsp;&emsp;</p>
+        <p class="same"><b> Last Name: </b>{{ last_name }} &emsp;&emsp;&emsp;</p>
+        <p class="same"><b> Father's Name: </b>{{ fathers_name }} &emsp;&emsp;&emsp;</p>
+        <p class="same"><b> Mother's Name: </b>{{ mothers_name }} &emsp;&emsp;&emsp;</p>
+    </tr>
+  </div>
+
+{% endblock %}

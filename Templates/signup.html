@@ -1,0 +1,38 @@
+{% extends 'first_draft.html' %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="container">
+    <br/>
+    <h2>Sign Up</h2>
+
+    <br/><br/>
+    <style>
+    form {
+    position: absolute;
+    width: 300px;
+    }
+</style>
+
+
+    <form action="/form" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" id="quantity" class="form-control" placeholder="Username" name="Username">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+
+
+</div>
+
+{% endblock %}

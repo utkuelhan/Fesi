@@ -1,0 +1,44 @@
+{% extends 'first_draft.html' %}
+
+{% block content %}
+
+  <div class="container">
+    </br>
+    </br>
+    <img id="image" src="https://tetralaboratuvar.com/wp-content/uploads/2020/10/diyabet-1.png" alt="Diabetes" style="width:650px; height:325px;" align="right">
+    <br/>
+    <h1>We are FESI</h1>
+    <h1>Welcome to our website!</h1>
+    </br>
+    <p style="font-size:1.2vw;">{{ instructions1 }}</p>
+    <p style="font-size:1.2vw;">{{ instructions2 }}</p>
+    <p style="font-size:1.2vw;">{{ instructions3 }}</p>
+    </br>
+  </div>
+
+ <style>
+    form {
+    position: relative;
+    left: 70px;
+    width: 300px;
+    }
+  </style>
+
+  <form action="/form" method="POST">
+  <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" placeholder="Username" name="Username">
+  </div>
+
+  <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" placeholder="Password" name="Password">
+  </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+
+
+{% endblock %}
+
+#to not get the credentials of CRUD ops
+{% block info %} {% endblock %}
