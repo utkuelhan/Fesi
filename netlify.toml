@@ -1,11 +1,7 @@
 [build]
-  base = /opt/build/repo
+  publish = "dist/anglify"
   command = "ng build --prod"
-  commandOrigin = config
-  publish = /opt/build/repo/dist/anglify
-  publishOrigin: config
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  redirectsOrigin: config
